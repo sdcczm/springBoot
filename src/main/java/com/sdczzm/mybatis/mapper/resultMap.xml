@@ -1,0 +1,13 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sdczzm.mybatis.mapper.ResultMapper">
+
+	<resultMap type="User" id="UserResult">
+	<!--  <id property="studId" column="stud_id" />  -->	
+		<result property="activeState" column="active_State" />
+		<result property="createDate" column="create_Date" />
+		<result property="createBy" column="create_By" />
+	</resultMap>
+	
+</mapper>
