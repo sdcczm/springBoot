@@ -14,6 +14,15 @@ import org.apache.ibatis.annotations.Update;
 
 import com.sdczzm.model.User;
 
+
+/**
+ * @Results 和 @ResultMap 效果相同 ，但是@ResultMap能复用
+ * 使用@Options设置自增长时，数据库表的ID要设置为自增长
+ * 
+ * 
+ * @author QiHuifang
+ *
+ */
 public interface UserMapper {
 		
 	@Select("SELECT * FROM user")
@@ -29,7 +38,7 @@ public interface UserMapper {
 	
 	@Insert("INSERT INTO user(name,code,active_State,create_Date,create_By,update_Date,update_By) "
 			+ " VALUES(#{name},#{code},1,sysdate(),#{createBy},sysdate(),#{updateBy} )")
-	@Options(useGeneratedKeys = true, keyProperty = "id",keyColumn = "id")   //数据库表的ID要设置为自增长
+	@Options(useGeneratedKeys = true, keyProperty = "id",keyColumn = "id")
 	void insert(User user);
 
 	@Update("UPDATE user SET name=#{name},code=#{code},active_State=#{activeState},"
