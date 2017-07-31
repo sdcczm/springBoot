@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 /**
- * SpringBootApplication 要与工程类放在一个包下
+ * SpringBootApplication 要与工程类放在一个包下,
  * @author QiHuifang
  *
  */

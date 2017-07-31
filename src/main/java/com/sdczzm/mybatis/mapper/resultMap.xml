@@ -6,8 +6,11 @@
 	<resultMap type="User" id="UserResult">
 		<!-- <id property="studId" column="stud_id" /> -->
 		<result property="activeState" column="active_State" />
-		<result property="createDate" column="create_Date" javaType="String"
-			jdbcType="DATE" typeHandler="com.sdczzm.mybatis.common.CustomDateToStringHandler" />
+		<!-- <result property="createDate" column="create_Date" javaType="String" 
+			jdbcType="DATE" typeHandler="com.sdczzm.mybatis.common.CustomDateToStringHandler" 
+			/> -->
+		<result property="createDate" column="create_Date" javaType="Date"
+			jdbcType="DATE" typeHandler="com.sdczzm.mybatis.common.CustomTimeStampHandler" />
 		<result property="createBy" column="create_By" />
 		<result property="updateDate" column="update_Date" javaType="Date"
 			jdbcType="DATE" typeHandler="com.sdczzm.mybatis.common.CustomTimeStampHandler" />

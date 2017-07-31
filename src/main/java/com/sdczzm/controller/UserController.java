@@ -15,6 +15,12 @@ import com.sdczzm.model.User;
   ● PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性）。
   ● DELETE（DELETE）：从服务器删除资源。
  * 
+ * 
+ *@RequestBody 传入得请求参数会被封装成实体 
+ * 
+ * 
+ * 
+ * 
  * @author QiHuifang
  *
  */
