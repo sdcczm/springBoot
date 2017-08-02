@@ -2,6 +2,7 @@ package com.sdczzm.mapper;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
@@ -10,8 +11,10 @@ import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.SelectProvider;
 import org.apache.ibatis.annotations.Update;
 
+import com.sdczzm.dynasql.UserDynaSqlProvider;
 import com.sdczzm.model.User;
 
 
@@ -32,7 +35,11 @@ public interface UserMapper {
 //	})
 	@ResultMap("com.sdczzm.mybatis.mapper.ResultMapper.UserResult")  
 	List<User> getUserList();	
-	
+		
+	@SelectProvider(type = UserDynaSqlProvider.class,method = "selectUserByConditions")
+	@ResultMap("com.sdczzm.mybatis.mapper.ResultMapper.UserResult")  
+	List<User> getUserListByConditions(Map<String, Object> params);	
+			
 	@Select("SELECT * FROM user where id = #{id}")
     User getUserById(Insert id);
 	

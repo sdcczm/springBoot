@@ -1,6 +1,9 @@
 package com.sdczzm.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -47,6 +50,16 @@ public class UserController {
 	public String updateUser(@RequestBody User user) {
 		userMapper.update(user);
 		return "success";
+	}
+	
+	
+	@RequestMapping(value="/user/condi",method=RequestMethod.GET)
+	public List<User> findUserListByConditions(@RequestParam("name") String name,@RequestParam("code") String code) {
+		Map<String, Object> params=new HashMap<String, Object>();
+		params.put("name", name);
+		params.put("code", code);
+		List<User> userList=userMapper.getUserListByConditions(params);
+		return userList;
 	}
 	
 
