@@ -20,6 +20,7 @@ mybatis个性化设置
     mybatis-config.xml 配置文件中不加<setting name="logImpl" value="LOG4J2" />也能打印SQL
     
            输出日志到文件 ：增加appenders--RollingFile 
-           
+ 
+ 待增加功能          
  分页
 事务         
