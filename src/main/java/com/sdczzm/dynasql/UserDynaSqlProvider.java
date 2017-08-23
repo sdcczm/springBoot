@@ -14,8 +14,13 @@ public class UserDynaSqlProvider {
 	
 	  public String selectUserByConditions(Map<String,Object> params)  
 	    {  
+		  String code=(String)params.get("code");
+		  if(!StringUtils.isNullOrEmpty(code)){
+          	code="%"+code+"%";
+  		    params.put("code",code);
+          }		  
 		  final String name=(String)params.get("name");
-		  final String code=(String)params.get("code");
+		  final String codeL=(String)params.get("code");
 	      String sql= new SQL()  
 	        {  
 	            {  
@@ -24,8 +29,8 @@ public class UserDynaSqlProvider {
 	                if(!StringUtils.isNullOrEmpty(name)){
 	                	WHERE("name=#{name}");
 	                }
-	                if(!StringUtils.isNullOrEmpty(code)){
-	                	WHERE("code=#{code}");
+	                if(!StringUtils.isNullOrEmpty(codeL)){
+	                	WHERE("code like #{code}");
 	                }
 	            }  
 	        } .toString(); 

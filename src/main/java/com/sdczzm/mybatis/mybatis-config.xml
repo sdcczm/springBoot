@@ -15,4 +15,12 @@
 			javaType="Date" jdbcType="DATE" />
 	</typeHandlers>
 
+	<properties>
+		<property name="dialect" value="mysql" />
+	</properties>
+	
+	<setting name="logImpl" value="LOG4J2" />  
+	
+ 
+
 </configuration>
