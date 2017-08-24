@@ -1,12 +1,14 @@
-package com.sdczzm.controller;
+package com.sdczzm;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 
 /**
- * SpringBootApplication 要与工程类放在一个包下,
+ * SpringBootApplication  启动类的同级包及其子包下的类都会扫描，并加载组件
  * @author QiHuifang
  *
  */

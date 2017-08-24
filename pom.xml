@@ -61,25 +61,14 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-
-		<!-- 热部署 -->
-		<!-- <dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>springloaded</artifactId>
-			<version>1.2.5.RELEASE</version>
-		</dependency> -->
+		
+        <!--使用AOP对请求做统一记录处理 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
 
 	</dependencies>
-
-
-<!-- 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build> -->
 	
 	
 	<build>
