@@ -2,7 +2,7 @@
 <configuration>  
     <properties>  
         <!-- 文件输出格式 -->  
-        <property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} |-%-5level [%thread] %c [%L] -| %msg%n</property>  
+        <property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} |%X{user} |-%-level [%thread] %c [%L] -| %msg%n</property>  
     </properties>  
   
     <appenders>  
@@ -23,7 +23,8 @@
         <!--打印SQL，程序的的mapper包下所有的SQL都会打印出来-->      
         <logger name="com.sdczzm.mapper" level="DEBUG"  additivity="true">
             <appenderref ref="RollingFile" />
-        </logger>       
+        </logger>   
+                    
         <root level="info">  
             <appenderref ref="CONSOLE" />  
         </root>  

@@ -22,6 +22,7 @@ mybatis个性化设置
            输出日志到文件 ：增加appenders--RollingFile
 
 0824 增加AOP切面，记录请求执行时间
+0904 完善记录日志，log4j2记录日志时，记录下操作用户 %X{user}
  
  待增加功能          
 事务       
