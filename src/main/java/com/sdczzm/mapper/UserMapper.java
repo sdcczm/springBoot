@@ -28,7 +28,7 @@ import com.sdczzm.model.User;
  */
 public interface UserMapper {
 		
-	@Select("SELECT * FROM user")
+	@Select("SELECT * FROM user limit 10")
 //	@Results({
 //		@Result(property = "activeState", column = "active_State"),
 //		@Result(property = "createDate", column = "create_Date",javaType = Date.class)

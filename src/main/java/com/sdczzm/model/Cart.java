@@ -2,6 +2,43 @@ package com.sdczzm.model;
 
 import java.util.Date;
 
+
+/**
+ * 
+ * @JsonIgnore
+ * @ToString
+ * @CreatedDate
+ * @LastModifiedDate
+ * @author QiHuifang
+ *
+ *
+ *
+ *
+ *dao层  CommandLineRunner
+ *
+ *Stream.of().forEach()
+ *
+ *
+ *页面
+ *直接带链接 怎么实现的 ——links
+ *
+ *
+ *生成API说明文档  swagger
+ *
+ *
+ *开发工具 pom 类提醒？
+ *
+ *sample_table 快捷键
+ *
+ *thymeleaf 页面标签使用前要引用 xmlns
+ *thymeleaf 插件 要加MVN依赖
+ *thymeleaf
+ *
+ *
+ *sample_user_actions 生成增删改查方法
+ */
+
+
 public class Cart {
 	
 	private Integer id;

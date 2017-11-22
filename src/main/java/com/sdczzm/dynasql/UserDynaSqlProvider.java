@@ -5,6 +5,7 @@ import java.util.Map;
 import org.apache.ibatis.jdbc.SQL;
 
 import com.mysql.jdbc.StringUtils;
+import com.sun.org.apache.xalan.internal.utils.XMLSecurityManager.Limit;
 
 
 
@@ -34,6 +35,7 @@ public class UserDynaSqlProvider {
 	                }
 	            }  
 	        } .toString(); 
+	        sql+=" limit 10 ";
 	        return sql;
 	    } 
 }
